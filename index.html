@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDKs -->
+  <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js"></script>
+  <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js"></script>
+  <script type="module" crossorigin src="https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Online To-Do List</h1>
+
+    <!-- Auth Section -->
+    <div id="auth-section">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button id="signup">Sign Up</button>
+      <button id="login">Login</button>
+    </div>
+
+    <!-- Task Section -->
+    <div id="todo-section" class="hidden">
+      <div class="top-bar">
+        <h2>Your Tasks</h2>
+        <button id="logout">Logout</button>
+      </div>
+
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <button id="addTask">+</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
